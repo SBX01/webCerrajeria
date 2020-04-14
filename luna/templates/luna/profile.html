@@ -1,0 +1,45 @@
+{% extends 'luna/base.html'%} {% block content%}
+
+<br>
+
+<div class="container">
+    <h4>Servicios</h4>
+    <table class="table table-striped">
+        <tr>
+            <th>Nombre</th>
+            <th>Direccion</th>
+            <th>Servicio solicitado</th>
+            <th>Opciones</th>
+        </tr>
+
+        {% for s in servicio %}
+        <tr>
+
+            <td>{{s.nombre}} {{s.apellido}}</td>
+            <td>{{s.direccion}}</td>
+            <td>{{s.tipoServicio}}</td>
+            <td>
+                <a href="{% url 'eliminar' s.id %}">Eliminar solicitud</a>
+                <a href="{% url 'modificar' s.id %}">Modificar solicitud</a>
+            </td>
+        </tr>
+
+        {% endfor %}
+    </table>
+</div>
+
+{% if messages %} {% for m in messages %}
+
+<div>{{m}}</div>
+
+{% endfor %} {% endif %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>{% endblock content%}

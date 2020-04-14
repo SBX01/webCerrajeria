@@ -1,0 +1,123 @@
+{% extends 'luna/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div id="sliderHome" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators" style=" z-index: 0;">
+        <li data-target="#sliderHome" data-slide-to="0" class="active"></li>
+        <li data-target="#sliderHome" data-slide-to="1"></li>
+        <li data-target="#sliderHome" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+            <a href="{% url 'agendar' %}"><img src="{% static 'luna/img/1.png'%}"></a>
+            <div class="carousel-caption d-none d-md-block">
+
+                <div class="tituloSlider">
+                    <h3 style=>Copias de llaves</h3>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+                <a href="{% url 'agendar' %}"><img src="{% static 'luna/img/2.png'%}"></a>
+            <div class="carousel-caption d-none d-md-block">
+                <div class="tituloSlider">
+                    <h3>Cambio de cerraduras</h3>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="carousel-item">
+                <a href="{% url 'agendar' %}"><img src="{% static 'luna/img/ultimo.png'%}"></a>
+            <div class="carousel-caption d-none d-md-block">
+                <div class="tituloSlider">
+                    <h3>Llaves nuevas a chapas y candados</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#sliderHome" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#sliderHome" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<br>
+<section id="empresa">
+    <div class="contenidoEmpresa">
+        <div class="container">
+            <div class="col-md-6">
+                <div class="texto-acerca">
+                    <h2>Sobre nosotros</h2>
+                    <p class="lead">Somos un negocio en crecimiento con mas de 2 años realizando copias de llaves,
+                        arreglos de chapas y portones eléctricos ademas contamos con algunos accesorios para sus
+                        llaves.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card-group">
+            <div class="card">
+                <a href="https://www.instagram.com/keychains_chiguayante/?hl=es-la" target="_blank"><img
+                        src="{% static 'luna/img/accesorio.png'%}" class="card-img-top" height="350"></a>
+                <div class="card-body">
+                    <h5 class="card-title">Accesorio</h5>
+
+                    <p class="card-text">Visita nuestra pagina de instagram para ver todos nuestro accesorios</p>
+                    <a href="https://www.instagram.com/keychains_chiguayante/?hl=es-la" target="_blank">Instagram</a>
+
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="{% static 'luna/img/ultimo.png'%}" class="card-img-top" height="350">
+                <div class="card-body">
+                    <h5 class="card-title">Ultimo Trabajo</h5>
+                    <p class="card-text">Se realizo un cambio en la combinacion del cilindro de una chapa</p>
+
+                </div>
+            </div>
+            <div class="card">
+                <iframe height="350" src="https://www.youtube.com/embed/mdcZ_NH0tQg?autoplay=0">
+
+                </iframe>
+                <div class="card-body">
+                    <h5 class="card-title">Sobre mi</h5>
+                    <p class="card-text">Soy un joven de 23 años que me dedico a realizar la bella arte la
+                        cerrajeria.
+                    </p>
+                    <p></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+
+
+<!--
+<script>
+    var modal = document.getElementById('id01');
+
+    // cuando se clickea fuera debria cerrarse
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>-->
+
+
+{% endblock content %}

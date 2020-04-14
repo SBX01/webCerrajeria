@@ -1,0 +1,31 @@
+{% extends 'luna/base.html' %} {% load static %} {% block content %}
+<br>
+<br>
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6" id="col_6">
+            <a href="{% url 'agendar'%}"><img src="{% static 'luna/img/abrir.png'%}" style="float: left;margin: 10px; width: 200px; height: auto;"></a>
+            <h6>Abrir puertas</h6>
+            Se olvido de sus llaves, se le rompio su llave dentro de la cerradura.
+        </div>
+        <div class="col-sm-6" id="col_6">
+            <a href="{% url 'agendar' %}"><img src="{% static 'luna/img/2.png'%}" style="float: left;margin: 10px; width: 200px; height: auto;"></a>
+            <h6>Cambio de cerraduras</h6>
+            Su cerradura actual esta en mal estado
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6" id="col_6">
+            <a href="{% url 'agendar' %}"><img src="{% static 'luna/img/1.png'%}" style="float: left;margin: 10px; width: 200px; height: auto;"></a>
+            <h6>Copias de llaves</h6>
+            Necesita una copia de llave para su auto, casa, porton, oficina o candado.
+        </div>
+        <div class="col-sm-6" id="col_6">
+            <a href="{% url 'agendar' %}"><img src="{% static 'luna/img/ultimo.png'%}" style="float: left;margin: 10px; width: 200px; height: auto;"></a>
+            <h6>Llaves nuevas para chapas y candados</h6>
+            Quiere cambiar el tipo de llave para su candado o chapa.
+        </div>
+    </div>
+</div>
+<br> {% endblock content %}

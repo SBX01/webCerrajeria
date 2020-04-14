@@ -1,0 +1,38 @@
+{% load crispy_forms_tags%}
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="container">
+    <h5>Inicio sesion</h5>
+      <form action="" method="POST">
+          {% csrf_token %}
+
+            <div class="container">
+                {{form| crispy}}
+            </div>
+            <div class="float-right">
+                
+                <input type="submit" value="Ingresar" class="btn btn-success">
+            </div>
+        </form>
+        <div class="float-right">
+            <a href="{% url 'home'%}"><input type="submit" value="volver" class="btn btn-danger"></a>
+        </div>
+        <a href="{%url 'registro'%}">Registrate</a>
+        <a href="{% url 'social:begin' 'facebook' %}">Login con facebook</a>
+        
+  </div>
+    
+</body>
+
+</html>
